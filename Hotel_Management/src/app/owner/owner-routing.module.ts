@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { OwnerlandingComponent } from './ownerlanding/ownerlanding.component';
 
 const routes: Routes = [
-  {path:"ownerlogin", component:OwnerlandingComponent}]
+  {path:"", component:OwnerlandingComponent}]
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

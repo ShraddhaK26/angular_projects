@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { UserlandingComponent } from './userlanding/userlanding.component';
 
 const routes: Routes = [
-  {path:"userlogin",component:UserlandingComponent}
+  {path:"",component:UserlandingComponent}
 ];
 
 @NgModule({
