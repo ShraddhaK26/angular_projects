@@ -1,0 +1,80 @@
+.land1{
+    width: 100%;
+    height: 580px;
+    background-image: url("../../assets/images/HM.1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+  
+  }
+  label
+  {
+      font: bold;
+      font-size: 15px;
+      font-family: arial black;
+      
+  }
+  input[type=text]:hover
+          {
+          border: 2px solid darkgrey;
+          
+         }
+  
+         input[type=submit]:hover
+          {
+          border: 2px solid darkgreen;
+          
+         }
+   
+      input[type=password]:hover
+          {
+          border: 2px solid darkgrey;
+          
+         }
+  
+     input[type=date]:hover
+          {
+          border: 2px solid darkgrey;
+          
+         }
+  
+  
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+  }
+  
+  li {
+  float: left;
+  }
+  
+  li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 35px;
+  text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+  background-color: rgb(6, 59, 34);
+  }
+  
+  .active {
+  background-color: #4CAF50;
+  }
+  
+  li a:hover
+  {
+  color: white;
+  
+  }
+  
+  .main{
+    text-align: center;
+    color:black;
+  font-size: 30px;
+  }
