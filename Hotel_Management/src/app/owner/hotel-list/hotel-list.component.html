@@ -1,0 +1,24 @@
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<div class="main">
+
+<div class="fix">
+    <input type="search"  placeholder="search Hotel name"  [(ngModel)]="searchText"> 
+   <button class="backbtn" (click)="back()">Back</button>
+</div>
+<div class="td">
+<table>
+  <tr >
+      <th *ngFor="let heading of tableHeading"> {{heading}} </th>
+  </tr>
+  <tr *ngFor="let data of hotelList | search: searchText">
+      <td>{{data.Hname}}</td>
+      <td>{{data.Hadd}}</td>
+      <td>{{data.HNo}}</td>
+      <td>{{data.Hmenu}}</td>
+      <td>{{data.room}}</td>
+      <td ><button (click)="edit(data.id)" style="font-size:15px" style="background-color: green;" >Edit <i class="fa fa-edit"></i></button></td>
+      <td ><button (click)="delete(data.id)" style="font-size:15px" style="background-color: red;">Delete <i class="fa fa-trash-o"></i></button></td>
+</table>
+</div> 
+
+</div>

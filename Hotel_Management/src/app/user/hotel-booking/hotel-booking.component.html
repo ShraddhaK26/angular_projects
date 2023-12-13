@@ -1,0 +1,51 @@
+<div class="demo">
+    <h1 class="title"> BOOK YOUR HOTEL</h1>
+    <div class="container">
+        <form [formGroup]="hotelbooking" class="formgroup">
+            <div>
+                <input type="text" class="inputBox1" formControlName="userName" placeholder="Enter Name"><br>
+                <span class="err" *ngIf="hotelbooking.get('userName')?.errors?.['maxlength']">
+                    Maximum 10 character's allowed</span>
+                <span class="err" *ngIf="hotelbooking.get('userName')?.errors?.['minlength']">
+                    Minimum 5 characters are required </span>
+                <span class="err" *ngIf=" !hotelbooking.get('userName')?.errors?.['maxlength'] 
+             && !hotelbooking.get('userName')?.errors?.['minlength']
+             && hotelbooking.get('userName')?.errors?.['pattern']">
+                    Enter only Alphabets
+                </span>
+                <br>
+
+                <input type="text" class="inputBox" placeholder="8888281134" formControlName="mobNo" maxlength="10"><br>
+                <span class="err" *ngIf="hotelbooking.get('mobNo')?.errors?.['pattern']">Enter numbers</span>
+
+                <br>
+
+                <input type="text" class="inputBox" formControlName="email" placeholder="abc@gmail.com"><br>
+                <span class="err" *ngIf="hotelbooking.get('email')?.errors?.['pattern']">Enter valid mail</span>
+                <br> 
+
+
+                <input type="text" class="inputBox" placeholder="dd/mm/yyyy" formControlName="dob">
+                <br> <br>
+                <!-- <span  *ngIf="age > 18 && age < 60">age should above 18 and below 60</span> -->
+               
+                <input type="text" class="inputBox" placeholder="Enter Your Pancard no." formControlName="pancard"><br>
+                <span class="err" *ngIf="hotelbooking.get('pancard')?.errors?.['pattern']">Enter valid pancard
+                    No.</span>
+                <br>
+                <input type="text" class="inputBox" placeholder="Enter City" formControlName="city"><br>
+                <span class="err" *ngIf="hotelbooking.get('city')?.errors?.['pattern']">Enter valid city</span>
+                <br>
+                <input type="text" class="inputBox" formControlName="payment" placeholder="Enter payment" maxlength="10"><br>
+                <span class="err" *ngIf="hotelbooking.get('payment')?.errors?.['pattern']">Enter numbers</span>
+                <br>
+                <label>Gender :</label>
+                <input type="radio" formControlName="gender" value="Male" (change)="gender()"> Male
+                <input type="radio" formControlName="gender" value="Female" (change)="gender()"> Female <br>
+                <div class="err" *ngIf="!isGenderSelected ">Please select gender</div> <br>
+               
+                <button  mat-raised-button color="primary" (click)="submit()" [disabled]="!hotelbooking.valid" >Submit</button> 
+                
+            </div>
+        </form>
+    </div>

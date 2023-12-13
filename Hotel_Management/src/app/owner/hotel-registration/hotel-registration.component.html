@@ -1,0 +1,78 @@
+<div class="background">
+    <button class="backbtn" (click)="back()">Back</button>
+    <div class="container">
+            <h1 class="title1"> Hotel Registration</h1>
+            <form [formGroup]="newHotelRegister">
+            <div >
+                
+                <input class="inBox" type="text" placeholder="Owner Name" formControlName="Oname" required>              
+                <span class="err" *ngIf="newHotelRegister.get('Oname')?.errors?.['maxlength']">Enter maximum 15 character allowed</span>
+                <span class="err" *ngIf="!newHotelRegister.get('Oname')?.errors?.['maxlength'] && newHotelRegister.get('Oname')?.errors?.['pattern']">Only Character Allowed</span> 
+                
+                <input class="inBox" type="text" placeholder="Owner Mobile No." formControlName="ono" required>           
+                <span class="err" *ngIf="newHotelRegister.get('ono')?.errors?.['maxlength']">Enter 10 digits</span>
+                <span class="err" *ngIf="!newHotelRegister.get('ono')?.errors?.['maxlength'] && newHotelRegister.get('ono')?.errors?.['pattern']">Only Numbers Allowed</span>
+                
+            </div>
+            <div >
+                <input class="inBox" type="text" placeholder="Hotel Name" formControlName="Hname" required>             
+                <span class="err" *ngIf="newHotelRegister.get('Hname')?.errors?.['maxlength']">Enter maximum 15 character allowed</span>
+                <span class="err" *ngIf="!newHotelRegister.get('Hname')?.errors?.['maxlength'] && newHotelRegister.get('Hname')?.errors?.['pattern']">Only Character Allowed</span>
+                
+                
+                <input class="inBox" type="text" placeholder="Hotel Address" formControlName="Hadd" required>           
+                <span class="err" *ngIf="newHotelRegister.get('Hadd')?.errors?.['maxlength']">Enter maximum 30 character allowed</span>
+               
+            </div>
+            <div >
+                <input class="inBox" type="text" placeholder="Hotel Mobile No." formControlName="HNo" required>             
+                <span class="err" *ngIf="newHotelRegister.get('HNo')?.errors?.['maxlength']">Enter maximum 15 character allowed</span>
+                <span class="err" *ngIf="!newHotelRegister.get('HNo')?.errors?.['maxlength'] && newHotelRegister.get('HNo')?.errors?.['pattern']">Only Numbers are allowed</span> 
+                
+                <input class="inBox" type="text" placeholder="Hotel Menu" formControlName="Hmenu" required>           
+                <span class="err" *ngIf="newHotelRegister.get('Hmenu')?.errors?.['maxlength']">Enter maximum 15 character allowed</span>
+                <span class="err" *ngIf="!newHotelRegister.get('Hmenu')?.errors?.['maxlength'] && newHotelRegister.get('Hmenu')?.errors?.['pattern']">Only Character Allowed</span>
+                
+            </div>
+            <div >
+                <input class="inBox" type="text" placeholder="Room Available" formControlName="room" required>             
+                <span class="err" *ngIf="newHotelRegister.get('room')?.errors?.['maxlength']">Enter maximum 15 character allowed</span>
+                <span class="err" *ngIf="!newHotelRegister.get('room')?.errors?.['maxlength'] && newHotelRegister.get('room')?.errors?.['pattern']">Only Character Allowed</span> 
+                
+                <input class="inBox" type="text" placeholder="Room Price" formControlName="rp" required>           
+                <span class="err" *ngIf="newHotelRegister.get('rp')?.errors?.['maxlength']">Enter maximum 15 character allowed</span>
+                <span class="err" *ngIf="!newHotelRegister.get('rp')?.errors?.['maxlength'] && newHotelRegister.get('rp')?.errors?.['pattern']">Only Character Allowed</span>
+                
+            </div>
+            <div >
+                <input class="inBox" type="text" placeholder="Hotel Email" formControlName="Hmail" required>             
+                <span class="err" *ngIf="newHotelRegister.get('Hmail')?.errors?.['maxlength']">Enter maximum 15 character allowed</span>
+                <span class="err" *ngIf="!newHotelRegister.get('Hmail')?.errors?.['maxlength'] && newHotelRegister.get('Hmail')?.errors?.['pattern']">Only Character Allowed</span> 
+
+                <input class="inBox" type="text" placeholder="Hotel Workers" formControlName="Hw" required>             
+                <span class="err" *ngIf="newHotelRegister.get('Hw')?.errors?.['maxlength']">Enter maximum 15 character allowed</span>
+                <span class="err" *ngIf="!newHotelRegister.get('Hw')?.errors?.['maxlength'] && newHotelRegister.get('Hw')?.errors?.['pattern']">Only Character Allowed</span> 
+
+
+               
+            </div>
+            <div class="inBox">
+                
+                <label for="" class="txt">Hotel Rating:</label>
+                <select formControlName="HotelRating" class="rate" aria-placeholder="hh">
+                    <option value="Luxurious">The Most Luxurious hotels</option>
+                    <option value="larger">Larger,Upscale hotel chains</option>
+                    <option value="simple">simple and basic with few extras</option>
+                </select> <br><br>
+            
+                
+            </div>
+         
+            <br><br>
+            <div>
+            <button *ngIf="IdRecord.length == 0" mat-raised-button color="accent" (click)="newHotelRegistration()">Submit </button> 
+            <button *ngIf="IdRecord.length > 0" mat-raised-button color="accent" (click)="update()" >Update</button> 
+        </div>
+        </form>
+    </div>
+</div>

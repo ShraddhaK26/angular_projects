@@ -1,8 +1,103 @@
 {
-  "admin" : [],
-  "owner" : [],
-  "user" : [],
-  "HotelDetails" : [],
-  "HotelBooking" : []
-
+  "admin": [],
+  "owner": [
+    {
+      "fname": "shraddha",
+      "pan": "LTSPK6567D",
+      "email": "shraddhakupekar@gmail.com",
+      "password": "12345",
+      "conpassword": "12345",
+      "gender": "Female",
+      "id": 1
+    },
+    {
+      "fname": "om",
+      "pan": "GHJKL9876H",
+      "email": "om@gmail.com",
+      "password": "09876",
+      "conpassword": "09876",
+      "gender": "Male",
+      "id": 2
+    }
+  ],
+  "user": [],
+  "HotelDetails": [
+    {
+      "Hmail": "swaraj@gmail.com",
+      "Oname": "shanti",
+      "ono": "1112225565",
+      "mobileNumber": "",
+      "Hname": "Hotel Swaraj",
+      "Hadd": "Banglore",
+      "HNo": "8569526548",
+      "Hmenu": "idaly Dosa",
+      "room": "309",
+      "rp": "3000",
+      "Hw": "50",
+      "HotelRating": "Luxurious",
+      "userName": "om",
+      "id": 1
+    },
+    {
+      "Hmail": "hotelsurya@gmail.com",
+      "Oname": "shanti",
+      "ono": "7058555116",
+      "mobileNumber": "",
+      "Hname": "Hotel Surya",
+      "Hadd": "Pune",
+      "HNo": "6523655962",
+      "Hmenu": "Non-veg",
+      "room": "305",
+      "rp": "2000",
+      "Hw": "20",
+      "HotelRating": "larger",
+      "userName": "om",
+      "id": 2
+    },
+    {
+      "Hmail": "maharaja@gmail.com",
+      "Oname": "shraddha",
+      "ono": "8888281134",
+      "mobileNumber": "",
+      "Hname": "Hotel Maharaja",
+      "Hadd": "Kolhapur",
+      "HNo": "888885265",
+      "Hmenu": " veg",
+      "room": "309",
+      "rp": "900",
+      "Hw": "15",
+      "HotelRating": "simple",
+      "userName": "shraddha",
+      "id": 3
+    },
+    {
+      "Hmail": "taj@gmail.com",
+      "Oname": "shraddha",
+      "ono": "7709536258",
+      "mobileNumber": "",
+      "Hname": "Hotel Taj",
+      "Hadd": "Mumbai",
+      "HNo": "8596251456",
+      "Hmenu": "italic",
+      "room": "356",
+      "rp": "5000",
+      "Hw": "500",
+      "HotelRating": "Luxurious",
+      "userName": "shraddha",
+      "id": 4
+    }
+  ],
+  "HotelBooking": [
+    {
+      "userName": "jay desai",
+      "email": "jay@gmail.com",
+      "mobNo": "6562365899",
+      "dob": "12/12/2023",
+      "payment": "1500",
+      "gender": "Male",
+      "pancard": "LKJHU8765G",
+      "city": "Bhopal",
+      "id": 1
+    }
+  ]
 }

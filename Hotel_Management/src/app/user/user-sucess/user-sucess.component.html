@@ -1,0 +1,24 @@
+<div class="background">
+
+<button (click)="showBookingDetails()">HOTEL-BOOKING NOW</button>
+
+
+<div class="td" *ngIf="showtable">
+    <div>
+    <input type="search" class="fix"  placeholder="search Hotel name"  [(ngModel)]="Hotels">
+</div> <br> <br>
+    <table>
+        
+      <tr >
+          <th *ngFor="let heading of tableHeading"> {{heading}} </th>
+      </tr>
+      <tr *ngFor="let data of BookingDetails | searchHotel : Hotels ">
+          <td>{{data.Hname}}</td>
+          <td>{{data.Hadd}}</td>
+          <td>{{data.HNo}}</td>
+          <td>{{data.Hmenu}}</td>
+          <td>{{data.room}}</td>
+          <td ><button (click)="hotelbooking()" style="font-size:15px" style="background-color: rgb(189, 15, 122);" >Book Now <i class="fa fa-edit"></i></button></td>
+    </table>
+    </div> 
+</div>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+   <head>
+        <title>Bootstrap 3 simple login form free template</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="login">
+            <div class="account-login">
+               <h1>User Login</h1>
+               <form [formGroup]="loginForm" class="login-form">
+                  <div class="form-group">
+                     <input type="text" placeholder="User Name" formControlName="userName" class="form-control"> <br>
+                     <span class="err" *ngIf="loginForm.get('userName')?.errors?.['maxlength']">
+                        Maximum 10 character's allowed</span>
+                    <span class="err" *ngIf="loginForm.get('userName')?.errors?.['minlength']">
+                        Minimum 5 characters are required </span>
+                    <span class="err" *ngIf=" !loginForm.get('userName')?.errors?.['maxlength'] 
+                 && !loginForm.get('userName')?.errors?.['minlength']
+                 && loginForm.get('userName')?.errors?.['pattern']">
+                        Enter only Alphabets
+                    </span>
+                    <br>
+                  </div>
+                  <div class="form-group">
+                     <input type="password" placeholder="Password" formControlName="password" class="form-control"> <br>
+                     <span class="passicon" *ngIf="loginForm" (click)="showPassword()"> <i class="bi bi-eye-fill"></i></span>
+                     <span class="passicon" *ngIf="!loginForm" (click)="showPassword()"><i class="bi bi-eye-slash-fill"></i></span>
+
+                  </div>
+                  <div class="remember">
+                     <label class="custom-checkbox">Remember me
+                     <input type="checkbox">
+                     <span class="checkmark"></span>
+                     </label>
+                     <a href="" class="pull-right">Forgot Password?</a>
+                  </div>
+                  <button class="btn" (click)="login()">Login</button>
+                  <p>Are you new?<a (click)="signup()" >Sign Up</a></p>
+               </form>
+            </div>
+        </div>
+   </body>
+</html>

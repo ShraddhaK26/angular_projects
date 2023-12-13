@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+<body>
+    <div class="signup-form">
+        <form [formGroup]="SignUpForm">
+            <h2>Sign Up</h2>
+            <p>Please fill in this form to create an account!</p>
+            <hr>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col"><input type="text" formControlName="fname" class="form-control" name="first_name" placeholder="First Name" required="required"></div>
+                    <span class="err" *ngIf="SignUpForm.get('fname')?.errors?.['maxlength']">
+                        Maximum 10 character's allowed</span>
+                    <span class="err" *ngIf="SignUpForm.get('fname')?.errors?.['minlength']">
+                        Minimum 5 characters are required </span>
+                    <span class="err" *ngIf=" !SignUpForm.get('fname')?.errors?.['maxlength'] 
+                 && !SignUpForm.get('fname')?.errors?.['minlength']
+                 && SignUpForm.get('fname')?.errors?.['pattern']">
+                        Enter only Alphabets
+                    </span>
+                    <br>
+                    <div class="col"><input type="text" formControlName="lname" class="form-control" name="last_name" placeholder="Last Name" required="required"></div>
+                    <span class="err" *ngIf="SignUpForm.get('lname')?.errors?.['maxlength']">
+                        Maximum 10 character's allowed</span>
+                    <span class="err" *ngIf="SignUpForm.get('lname')?.errors?.['minlength']">
+                        Minimum 5 characters are required </span>
+                    <span class="err" *ngIf=" !SignUpForm.get('lname')?.errors?.['maxlength'] 
+                 && !SignUpForm.get('lname')?.errors?.['minlength']
+                 && SignUpForm.get('lname')?.errors?.['pattern']">
+                        Enter only Alphabets
+                    </span>
+                    <br>
+                </div>        	
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" formControlName="email" name="email" placeholder="Email" required="required"> <br>
+                <span class="err" *ngIf="SignUpForm.get('email')?.errors?.['pattern']">Enter Valid Email</span>
+
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" formControlName="password" name="password" placeholder="Password" required="required">
+                <span class="passicon" *ngIf="pass" (click)="hidepass()"> <i class="bi bi-eye-fill"></i></span>
+                <span class="passicon" *ngIf="!pass" (click)="hidepass()"><i class="bi bi-eye-slash-fill"></i></span>
+         <br> 
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" formControlName="Conpassword" name="confirm_password" placeholder="Confirm Password" required="required">
+                <span class="passicon" *ngIf="conpass" (click)="hideconpass()"> <i class="bi bi-eye-fill"></i></span>
+                   <span class="passicon" *ngIf="!conpass" (click)="hideconpass()"><i class="bi bi-eye-slash-fill"></i></span>
+                
+            </div>        
+            <div class="form-group">
+                <label class="form-check-label"><input type="checkbox"  required="required"> I accept the Terms of Use Privacy Policy</label>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg" (click)="login()">Sign Up</button>
+            </div>
+        </form>
+        <div class="hint-text">Already have an account? <a href="/user/" (click)="back()">Login here</a></div>
+    </div>
+    </body>
