@@ -14,6 +14,7 @@ export class HotelRegistrationComponent {
   userName:any;
   IdRecord: any;
   id: any;
+  new: any;
   
   constructor(private fb:FormBuilder ,
     private apiCallService:ApicallserviceService,
@@ -23,7 +24,8 @@ ngOnInit(){
  this.userName=this.apiCallService.userName;
  this.IdRecord=this.apiCallService.IdRecord;
  console.log(this.IdRecord,this.IdRecord);
- 
+ this.id=this.apiCallService.id;
+ this.new = this.apiCallService.new
   this.formDetails() 
 } 
  
@@ -43,6 +45,7 @@ formDetails(){
     // userName: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9]*$')]], 
     Hw: [this.IdRecord ? this.IdRecord[0]?.Hw:'', [Validators.required, Validators.minLength(8)]], 
     HotelRating:[this.IdRecord ? this.IdRecord[0]?.HotelRating:'',Validators.required] ,
+    img:[''],
     userName:[this.userName]
   })  
 } 
@@ -63,17 +66,19 @@ newHotelRegistration(){
 update(){
   
   
- this.apiCallService.patchApiCall("hotelDetails",this.id,this.newHotelRegister.value).subscribe(responce=>{
-
+ this.apiCallService.patchApiCall("hotelDetails",this.id,this.newHotelRegister.value).subscribe((responce:any)=>{
+  if(responce){ 
+    alert('Hotel registered Successfuly...!!');
+  this.router.navigateByUrl("Osucess");
+  }
   })
-
-  this.router.navigateByUrl("Osucess")
 }
+
 
 
 ngOnDestroy(){
   console.log("destroy");
-  
+  this.apiCallService.new = false;
   this.apiCallService.IdRecord=[];
   
 }

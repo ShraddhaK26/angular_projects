@@ -10,14 +10,18 @@ import { ApicallserviceService } from 'src/app/common services/apicallservice.se
 export class UserSucessComponent {
   showtable=false;
   BookingDetails:any;
-  Hotels:any;
-  tableHeading = ['Hotel Name', 'Hotel address', 'Hotel No.','Hotel Menu','Room','Book Hotel'];
+  searchText:any;
+  id: any;
+  showList:boolean=false;
   constructor(private router:Router,private apicallservice:ApicallserviceService){}
 
+  ngOnInit(){
+    this.id=this.apicallservice.id;
+  }
 
   async showBookingDetails(){
   this.BookingDetails = await this.apicallservice.getApiCall("hotelDetails").toPromise()
-      this.showtable =true;
+      this.showList =!this.showList;
       console.log("bookingdetails",this.BookingDetails);
  }
 
@@ -29,7 +33,7 @@ export class UserSucessComponent {
 
 
   hotelbooking(){
-    this.router.navigateByUrl("/user/hotelbooking")
+    this.router.navigateByUrl("/user/hotelBooking")
   }
 
 

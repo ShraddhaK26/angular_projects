@@ -11,6 +11,7 @@ export class ApicallserviceService {
   IdRecord:any;
   url="http://localhost:3000"
   userName: any;
+  new: boolean =false;
   
   constructor(private httpClient: HttpClient) { }
   postApiCall(endPoint: any, formData: any) {

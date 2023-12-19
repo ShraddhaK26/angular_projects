@@ -3,6 +3,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApicallserviceService } from 'src/app/common services/apicallservice.service';
 
+interface Food {
+  value: string;
+  viewValue: string;
+}
+
 @Component({
   selector: 'app-hotel-booking',
   templateUrl: './hotel-booking.component.html',
@@ -20,12 +25,18 @@ export class HotelBookingComponent {
   endPoint: string = "HotelBooking";
   constructor( public fb : FormBuilder,private router:Router,public apicallservice:ApicallserviceService){}
 
+  
   ngOnInit(){
    this.formDetails();
    console.log(this.hotelbooking,);
 
     
   }
+  foods: Food[] = [
+    { value: 'net-banking', viewValue: 'Net-Banking' },
+    { value: 'upi', viewValue: 'UPI' },
+    { value: 'qr', viewValue: 'QR' },
+  ];
 
   formDetails(){
     this.hotelbooking = this.fb.group({
@@ -33,7 +44,7 @@ export class HotelBookingComponent {
       email:[,[Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)]],
       mobNo:['',[Validators.pattern('[0-9+]*')]],
      dob:['',[Validators.pattern(this.datePattern)]],
-     payment:['',[Validators.pattern('[0-9+]*')]],
+     payment:[''],
      gender:[''],
      pancard:['',[Validators.pattern('[A-Z 1-9]*')]],
      city:['',[Validators.pattern('[a-zA-Z ]+')]]
@@ -54,7 +65,7 @@ export class HotelBookingComponent {
       console.log("res>>",response);
       if(response){
         alert('Data submitted Successfuly...!!');
-        this.router.navigateByUrl('home');
+        this.router.navigateByUrl('user/home');
         
       }
   })
@@ -63,6 +74,9 @@ export class HotelBookingComponent {
   gender(){
     this.isGenderSelected = true;
 
+  }
+  back(){
+    this.router.navigateByUrl('user/home');
   }
 
 

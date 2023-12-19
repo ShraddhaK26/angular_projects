@@ -1,0 +1,61 @@
+.background{
+    width: 100%;
+    height: 650px;
+    background-image: url("../../../assets/images/HM.17.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+}
+
+.account-login {
+    width: 400px;
+    height: 350px;
+    background:transparent;
+    margin-top: 100px;
+    margin-left: 420px;
+    box-shadow: 0 0 20px rgb(8, 6, 6);
+    border-radius: 25px;
+    text-align: center;
+    opacity: 0.9;
+    }
+    .passicon{
+        position: relative;
+        left: -4%;
+        right: 103%;
+        top: 2px;
+        text-align: center;
+      
+      }
+      .passicon1{
+        position: relative;
+        left: 31%;
+        right: 103%;
+        top: -27px;
+        text-align: center;
+      
+      }
+    .login-form input {
+        width: 70%;
+        position: relative;
+        border-bottom: 1px solid #a39e9e;
+        padding: 0;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        box-shadow: none;
+        height: 40px;
+        border-radius: 0px;
+        }
+        button.btn {
+            width: 50%;
+            background: rgb(1, 41, 1);
+            font-size: 20px;
+            padding: 11px;
+            color: #fff;
+            border: 0px;
+            margin: 10px 0px 20px;
+            }
+            .btn:hover{
+                color: #fff;
+                opacity: 0.8;
+            }

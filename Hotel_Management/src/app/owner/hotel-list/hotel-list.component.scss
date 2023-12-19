@@ -1,92 +1,233 @@
-.main{
-    background-image: url(../../../assets/images/HM.11.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 530px;
-    padding-top: 80px;
-    position: fixed;
-    
+// .main{
+//     background-image: url(../../../assets/images/HM.11.jpg);
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     height: 530px;
+//     padding-top: 80px;
+//     position: fixed;
+   
  
    
  
-}
-.container{
-    height: 170px;
-    background-color: aliceblue;
-    margin: 50px;
+// }
+
+
+// .container{
+//     height: 170px;
+//     background-color: aliceblue;
+//     margin: 50px;
+  
+  
  
   
+// }
+// .demo{
+// position: sticky;
+// z-index: 1;
+// height: 150px;
+
+
+// }
+// .img{
+//   height: 150px;
+// }
+// .hoteldetail{
+//  margin-left: 20px;
+//   text-align: center;
+//   position: sticky;
+
+// }
+// .main2{
+//     float: right;
+//     margin-right: 30px;
+//     position: sticky;
+//     // position: absolute;
+//     // padding-bottom: 15px;
+   
+// }
+// label{
+//    padding-left: 100px;
+  
+// }
+
+
+// .fix{
+//     position: sticky;
+//     height: 15px;
+//     top: 0px;
+//     /* z=positive element will come in front */
+//     z-index: 1;
+//     width: 1406px;
+   
+// }
+// .overflowTest {
+//     // background: #4CAF50;
+//     // color: white;
+//     padding: 15px;
+//     width: 90%;
+//     height: 480px;
+//     overflow: scroll;
+//     border: 1px solid #ccc;
+//   }
+//   input[type="search"]{
+//     color: rgb(24, 23, 23);
+//     background-color: #ffffff;
+//     padding: 10px;
+//     width: 60%;
+//     border-radius: 20px;
+//     margin-left: 40px;
+//   }
+//   .backbtn{
+//     padding: 5px;
+//     color: white;
+//     background-color: black;
+//     font-size: 18px;
+//    margin-left: 60px;
+//    border-radius: 10px;
+//   }
+
+  
+//   container {
+   
+//     width:20%;
+//     height: 190px;
+//     margin-left: 36px;
+//     margin-top: 60px;
+//     background-color: aliceblue;
+//   }
+
+//   .h2{
+//     text-align: center;
+//     padding-top: 24px;
+//   }
+//  .h3{
+// padding-left: 440px;
+// margin-top: 55px;
+//  }
+//  .hh3{
+// margin-top: -46px;
+// margin-left: 721px;
+
+//  }
+
+//  .hhh3{
+//   margin-top: -40px;
+//   margin-left: 1063px;
+//  }
+//  .btn1{
+//   margin-top: -40;
+//   margin-left: 1070px;
+//  }
+//  .btn2{
+//   margin-top: -60;
+//   margin-left: 1070px;
+//  }
+.main{
+  background-image: url(../../../assets/images/HM.11.jpg);
+  background-size: cover;
+  height: 530px;
+  padding-top: 80px;
+  position: absolute;
+
+ 
+
+}
+.container{
+  height: 185px;
+  background-color: aliceblue;
+  margin: 50px;
+ 
+}
+.container:hover{
+background-color: rgb(215, 244, 244);
 }
 img{
-    float: left;
-    padding: 5px;
+  float: left;
+  padding: 7px;
 }
 .hoteldetail{
- margin-left: 20px;
-  text-align: center;
-  position: sticky;
+margin-left: 20px;
+text-align: center;
+position: sticky;
 
 }
 .main2{
-    float: right;
-    margin-right: 30px;
-    position: sticky;
-    // position: absolute;
-    // padding-bottom: 15px;
-   
+  float: right;
+  margin-right: 30px;
+  position: sticky;
+  // position: absolute;
+  // padding-bottom: 15px;
+ 
 }
 label{
-   padding-left: 100px;
-  
+ padding-left: 100px;
+
 }
 
 
 .fix{
-    position: sticky;
-    height: 15px;
-    top: 0px;
-    /* z=positive element will come in front */
-    z-index: 1;
-    width: 1406px;
-   
+  position: sticky;
+  height: 15px;
+  top: 0px;
+  /* z=positive element will come in front */
+  z-index: 1;
+  width: 1406px;
+ 
 }
 .overflowTest {
-    // background: #4CAF50;
-    // color: white;
-    padding: 15px;
-    width: 90%;
-    height: 480px;
-    overflow: scroll;
-    border: 1px solid #ccc;
-  }
-  input[type="search"]{
-    color: rgb(24, 23, 23);
-    background-color: #ffffff;
-    padding: 10px;
-    width: 60%;
-    border-radius: 20px;
-    margin-left: 40px;
-  }
-  .backbtn{
-    padding: 5px;
-    color: white;
-    background-color: black;
-    font-size: 18px;
-   margin-left: 60px;
-   border-radius: 10px;
-  }
-  .td{
-    margin: 50px;
-  }
+  // background: #4CAF50;
+  // color: white;
+  padding: 15px;
+  width: 90%;
+  height: 480px;
+  overflow: scroll;
+  border: 1px solid #ccc;
+}
+input[type="search"]{
+  color: rgb(24, 23, 23);
+  background-color: #ffffff;
+  padding: 10px;
+  width: 60%;
+  border-radius: 20px;
+  margin-left: 40px;
+}
+.backbtn{
+  padding: 5px;
+  color: white;
+  background-color: black;
+  font-size: 18px;
+ margin-left: 60px;
+ border-radius: 10px;
+}
+.backbtn:hover{
+  background-color: white;
+  color: black;
+}
 
-  table, td, th {
-    border: 1px solid black;
-  }
-  
-  table {
-    border-collapse: collapse;
-    width: 80%;
-    height: 99px;
-    background-color: aliceblue;
-  }
- 
+
+
+th{
+padding: 5px;
+padding-left:26px;
+text-align: start;
+}
+td{
+  text-align: start;
+}
+.price{
+  font-size: 22px;
+  color: rgb(78, 85, 85);
+}
+
+.bookingbtn{
+  padding: 5px;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+}
+.bookingbtn:hover{
+  background-color: rgb(42, 56, 29);
+  box-shadow: 4px 4px 4px rgb(78, 207, 227);
+  margin-left: 5px;
+  padding: 6px;
+}

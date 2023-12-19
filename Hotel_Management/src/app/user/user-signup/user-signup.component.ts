@@ -14,7 +14,8 @@ export class UserSignupComponent {
   showWorning=true; 
   pass = false;
   conpass = false;
-  endPoint: string = "owner";
+  endPoint: string = "user";
+  showpass: boolean=true;
 
   
   constructor(private fb:FormBuilder,private router:Router,private apiCallService: ApicallserviceService,
@@ -42,11 +43,22 @@ export class UserSignupComponent {
   hideconpass() {
     this.conpass = !this.conpass
   }
+  
+  showPassword() {
+    this.showpass = !this.showpass
+  }
 login(){
   console.log('data', this.SignUpForm.value);
-  
-  // this.router.navigateByUrl("/user/home");
+  this.apiCallService.postApiCall(this.endPoint, this.SignUpForm.value).subscribe(response => {
+    console.log("res>>",response);
+    if(response){
+      alert('Data submitted Successfuly...!!');
+      this.router.navigateByUrl('user');
+      
+    }
+  })
 }
+
 
 
 

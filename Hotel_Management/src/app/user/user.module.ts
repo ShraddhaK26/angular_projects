@@ -10,6 +10,11 @@ import { UserSucessComponent } from './user-sucess/user-sucess.component';
 import { SearchHotelPipe } from './pipe/search-hotel.pipe';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { UserSignupComponent } from './user-signup/user-signup.component';
+import { ForgetpassComponent } from './forgetpass/forgetpass.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ImageSetPipe } from './pipe/image-set.pipe';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 
 
 
@@ -20,15 +25,22 @@ import { UserSignupComponent } from './user-signup/user-signup.component';
     UserSucessComponent,
     HotelBookingComponent,
     SearchHotelPipe,
+    ImageSetPipe,
     UserLoginComponent,
     UserSignupComponent,
+    ForgetpassComponent,
+
    
     
   ],
   imports: [
     CommonModule,
     UserRoutingModule,
-    Shared2Module,
+    FormsModule,
+    ReactiveFormsModule,
+  MatToolbarModule
+    
+    
     
   ]
 })

@@ -1,5 +1,6 @@
 <div class="demo">
     <h1 class="title"> BOOK YOUR HOTEL</h1>
+    <button class="btn" (click)="back()">Back</button>
     <div class="container">
         <form [formGroup]="hotelbooking" class="formgroup">
             <div>
@@ -22,13 +23,13 @@
 
                 <input type="text" class="inputBox" formControlName="email" placeholder="abc@gmail.com"><br>
                 <span class="err" *ngIf="hotelbooking.get('email')?.errors?.['pattern']">Enter valid mail</span>
-                <br> 
+                <br>
 
 
-                <input type="text" class="inputBox" placeholder="dd/mm/yyyy" formControlName="dob">
-                <br> <br>
-                <!-- <span  *ngIf="age > 18 && age < 60">age should above 18 and below 60</span> -->
                
+                <input type="date" id="birthday" class="inputBox" formControlName="dob"> <br> <br>
+                <!-- <span  *ngIf="age > 18 && age < 60">age should above 18 and below 60</span> -->
+
                 <input type="text" class="inputBox" placeholder="Enter Your Pancard no." formControlName="pancard"><br>
                 <span class="err" *ngIf="hotelbooking.get('pancard')?.errors?.['pattern']">Enter valid pancard
                     No.</span>
@@ -36,16 +37,19 @@
                 <input type="text" class="inputBox" placeholder="Enter City" formControlName="city"><br>
                 <span class="err" *ngIf="hotelbooking.get('city')?.errors?.['pattern']">Enter valid city</span>
                 <br>
-                <input type="text" class="inputBox" formControlName="payment" placeholder="Enter payment" maxlength="10"><br>
-                <span class="err" *ngIf="hotelbooking.get('payment')?.errors?.['pattern']">Enter numbers</span>
-                <br>
+                <label class="txt">Payment methode:</label>
+                <select formControlName="payment" class="rate" aria-placeholder="hh">
+                    <option *ngFor="let food of foods" [value]="food.value">{{food.viewValue}}</option>
+
+                </select> <br> <br>
                 <label>Gender :</label>
                 <input type="radio" formControlName="gender" value="Male" (change)="gender()"> Male
                 <input type="radio" formControlName="gender" value="Female" (change)="gender()"> Female <br>
                 <div class="err" *ngIf="!isGenderSelected ">Please select gender</div> <br>
-               
-                <button  mat-raised-button color="primary" (click)="submit()" [disabled]="!hotelbooking.valid" >Submit</button> 
-                
+
+                <button mat-raised-button color="primary" (click)="submit()"
+                    [disabled]="!hotelbooking.valid" class="btn">Submit</button>
+
             </div>
         </form>
     </div>

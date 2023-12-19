@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+   <head>
+        <title>Bootstrap 3 simple login form free template</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="login">
+            <div class="account-login">
+               <h1>Admin Signup</h1>
+               <form class="login-form" [formGroup]="adminSignUpForm">
+                  <div class="form-group">
+                     <input type="text" placeholder="User Name" formControlName="userName" class="form-control"> <br>
+                     <span class="err" *ngIf="adminSignUpForm.get('userName')?.errors?.['maxlength']">
+                        Maximum 10 character's allowed</span>
+                    <span class="err" *ngIf="adminSignUpForm.get('userName')?.errors?.['minlength']">
+                        Minimum 5 characters are required </span>
+                    <span class="err" *ngIf=" !adminSignUpForm.get('userName')?.errors?.['maxlength'] 
+                 && !adminSignUpForm.get('userName')?.errors?.['minlength']
+                 && adminSignUpForm.get('userName')?.errors?.['pattern']">
+                        Enter only Alphabets
+                    </span>
+                    <br>
+                    <div class="form-group">
+                        <input type="email" class="form-control" formControlName="email" name="email" placeholder="Email" required="required"> <br>
+                        <span class="err" *ngIf="adminSignUpForm.get('email')?.errors?.['pattern']">Enter Valid Email</span>
+        
+                    </div>
+                  </div>
+                  <div class="form-group">
+                     <input type="password" placeholder="Password" [type]="pass? 'text': 'password'" formControlName="password" class="form-control"> <br>
+                     <span class="passicon" *ngIf="pass" (click)="hidepass()"> <i class="bi bi-eye-fill"></i></span>
+                     <span class="passicon" *ngIf="!pass" (click)="hidepass()"><i class="bi bi-eye-slash-fill"></i></span>
+                   
+           
+
+                  </div>
+                  <div class="remember">
+                     <label class="custom-checkbox">Remember me
+                     <input type="checkbox">
+                     <span class="checkmark"></span>
+                     </label>
+                     
+                     
+                  </div>
+                  <button class="btn" (click)="Submit()">Login</button>
+                
+               </form>
+            </div>
+        </div>
+   </body>
+</html>
+

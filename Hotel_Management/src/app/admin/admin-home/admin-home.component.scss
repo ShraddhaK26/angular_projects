@@ -1,0 +1,79 @@
+// {
+//     margin: 0px;
+//     padding: 0px;
+//     }
+    .login {
+    background-image: linear-gradient(to bottom, #dd3cad 0%, #fff 100%);
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    }
+    .account-login {
+    width: 500px;
+    }
+    .form-control:focus {
+    box-shadow: none;
+    }
+    p a {
+    padding-left: 2px;
+    }
+    .account-login h1 {
+    font-size: 25px;
+    text-align: left;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    }
+    .login-form input {
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #a39e9e;
+    padding: 0;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    box-shadow: none;
+    height: 63px;
+    border-radius: 0px;
+    }
+    .login-form {
+    background: #fff;
+    float: left;
+    width: 100%;
+    padding: 40px;
+    border-radius: 5px;
+    }
+    button.btn {
+        width: 20%;
+        background: #b9089c;
+        font-size: 20px;
+        padding: 7px;
+        color: #fff;
+        border: 2px;
+        margin-top: -450px;
+        margin-right: 99px;
+        }
+        .btn:hover{
+            color: #fcf8fb;
+            opacity: 0.8;
+        }
+        .p{
+            color:antiquewhite;
+            text-align: center;
+           font-size: 40px;
+         font-weight:100;
+             font-family: "Lucida Console", "Courier New", monospace;
+        }
+        .h1{
+            color: #b9089c;
+            font-size: 70px;
+            font-weight: bolder;
+            font-family: "Lucida Console", "Courier New", monospace;
+            text-underline-position: below , 2px,#b9089c;
+        }
+        .text{
+            margin-left:-528px;
+        }

@@ -12,16 +12,19 @@ export class UserLoginComponent {
   loginForm!:FormGroup;
 
   showWorning=true; 
-  showPass:boolean=false; 
-  ownerData:any;
-  showpass = false;
+  showpass:boolean=false; 
+  UserData:any;
+  endPoint ="user";
+  pass = false;
+ 
+  
   
   constructor(private fb:FormBuilder,private router:Router,private apiCallService: ApicallserviceService,
    ){} 
  
   ngOnInit(){ 
    this.formDetails(); 
-   
+this.UserSignUpData();
   } 
  
   formDetails(){ 
@@ -30,18 +33,50 @@ export class UserLoginComponent {
    password:["",[Validators.required]] 
   }) 
   } 
+ 
+ 
 
-  showPassword() {
-    this.showpass = !this.showpass
-  }
-  
+  UserSignUpData(){
+    let endPoint ="user";
+   this.apiCallService.getApiCall(endPoint).subscribe(res=>{
+    this.UserData = res;
+    console.log("userdata",this.UserData);
+    
+   })}
+
 login(){
-  console.log('data', this.loginForm.value);
   
-  // this.router.navigateByUrl("/user/home");
+  if(this.UserData){
+    var matchedObj= this.UserData.find((item:any)=>{
+    if(item.fname == this.loginForm.value.userName && item.password == this.loginForm.value.password){
+       return item;
+      
+     }
+     
+     })
+ 
+   if(matchedObj){
+    console.log(this.loginForm.value);
+    this.apiCallService.userName=this.loginForm.value.userName;
+     this.router.navigateByUrl("/user/home");
+   }
+   else{
+     this.router.navigateByUrl('');
+   }
+ }
+ 
 }
+
+hidepass() {
+  this.pass = !this.pass;
+}
+
+
 
 signup(){
   // this.router.navigateByUrl("/user/userSignup")
+}
+ForgetPass(){
+  this.router.navigateByUrl("/user/forgetPassword")
 }
 }

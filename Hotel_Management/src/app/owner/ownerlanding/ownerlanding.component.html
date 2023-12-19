@@ -17,7 +17,7 @@
         <mat-form-field >
             <mat-label>Password</mat-label>
             <input type="text" matInput [type]="showpass ? 'text' : 'password'"  formControlName="password">
-            <mat-icon (click)="showPassword()" matSuffix  > visibility_off </mat-icon>
+            <mat-icon (click)="showPassword()" matSuffix>visibility_off</mat-icon>
             <mat-hint *ngIf="!loginForm.get('password')?.touched" class="hint">Please Enter Password</mat-hint> 
             <mat-error>Password is <strong>required</strong></mat-error> 
        

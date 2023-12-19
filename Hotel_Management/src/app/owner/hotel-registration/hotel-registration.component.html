@@ -45,7 +45,7 @@
                 
             </div>
             <div >
-                <input class="inBox" type="text" placeholder="Hotel Email" formControlName="Hmail" required>             
+                <input class="inBox" type="text" placeholder="Hotel Email" formControlName="Hmail" required>        
                 <span class="err" *ngIf="newHotelRegister.get('Hmail')?.errors?.['maxlength']">Enter maximum 15 character allowed</span>
                 <span class="err" *ngIf="!newHotelRegister.get('Hmail')?.errors?.['maxlength'] && newHotelRegister.get('Hmail')?.errors?.['pattern']">Only Character Allowed</span> 
 
@@ -58,20 +58,23 @@
             </div>
             <div class="inBox">
                 
-                <label for="" class="txt">Hotel Rating:</label>
+                <label  class="txt">Hotel Rating:</label>
                 <select formControlName="HotelRating" class="rate" aria-placeholder="hh">
                     <option value="Luxurious">The Most Luxurious hotels</option>
                     <option value="larger">Larger,Upscale hotel chains</option>
                     <option value="simple">simple and basic with few extras</option>
-                </select> <br><br>
-            
+                </select> 
+ 
+                <label class="txt">image:</label>
+                <input type="file" id="img" class="txt"  formControlName="img" accept="image/*"> 
+                
                 
             </div>
          
             <br><br>
             <div>
-            <button *ngIf="IdRecord.length == 0" mat-raised-button color="accent" (click)="newHotelRegistration()">Submit </button> 
-            <button *ngIf="IdRecord.length > 0" mat-raised-button color="accent" (click)="update()" >Update</button> 
+            <button *ngIf="new"  mat-raised-button color="accent" (click)="newHotelRegistration()">Submit </button> 
+            <button *ngIf="!new" mat-raised-button color="accent" (click)="update()" >Update</button> 
         </div>
         </form>
     </div>

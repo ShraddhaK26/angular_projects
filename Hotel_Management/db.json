@@ -1,5 +1,18 @@
 {
-  "admin": [],
+  "admin": [
+    {
+      "userName": "saloni",
+      "email": "saloni@gmail.com",
+      "password": "saloni123",
+      "id": 1
+    },
+    {
+      "userName": "isha",
+      "email": "isha@gmail.com",
+      "password": "isha123",
+      "id": 2
+    }
+  ],
   "owner": [
     {
       "fname": "shraddha",
@@ -20,43 +33,37 @@
       "id": 2
     }
   ],
-  "user": [],
+  "user": [
+    {
+      "fname": "riya",
+      "lname": "desai",
+      "email": "riya@gmail.com",
+      "password": "riya",
+      "Conpassword": "riya",
+      "id": 1
+    }
+  ],
   "HotelDetails": [
     {
-      "Hmail": "swaraj@gmail.com",
-      "Oname": "shanti",
-      "ono": "1112225565",
-      "mobileNumber": "",
-      "Hname": "Hotel Swaraj",
-      "Hadd": "Banglore",
-      "HNo": "8569526548",
-      "Hmenu": "idaly Dosa",
-      "room": "309",
-      "rp": "3000",
-      "Hw": "50",
-      "HotelRating": "Luxurious",
-      "userName": "om",
-      "id": 1
-    },
-    {
       "Hmail": "hotelsurya@gmail.com",
-      "Oname": "shanti",
+      "Oname": "om",
       "ono": "7058555116",
       "mobileNumber": "",
       "Hname": "Hotel Surya",
       "Hadd": "Pune",
       "HNo": "6523655962",
       "Hmenu": "Non-veg",
-      "room": "305",
+      "room": "300",
       "rp": "2000",
       "Hw": "20",
       "HotelRating": "larger",
+      "img": "C:\\fakepath\\HM.9.jpg",
       "userName": "om",
-      "id": 2
+      "id": 1
     },
     {
       "Hmail": "maharaja@gmail.com",
-      "Oname": "shraddha",
+      "Oname": "om",
       "ono": "8888281134",
       "mobileNumber": "",
       "Hname": "Hotel Maharaja",
@@ -67,8 +74,9 @@
       "rp": "900",
       "Hw": "15",
       "HotelRating": "simple",
-      "userName": "shraddha",
-      "id": 3
+      "img": "C:\\fakepath\\HM.6.jpg",
+      "userName": "om",
+      "id": 2
     },
     {
       "Hmail": "taj@gmail.com",
@@ -83,6 +91,24 @@
       "rp": "5000",
       "Hw": "500",
       "HotelRating": "Luxurious",
+      "img": "C:\\fakepath\\HM.18.jpg",
+      "userName": "shraddha",
+      "id": 3
+    },
+    {
+      "Hmail": "sayaji@gmail.com",
+      "Oname": "shraddha",
+      "ono": "6564545454",
+      "mobileNumber": "",
+      "Hname": "sayaji",
+      "Hadd": "gadhinglaj",
+      "HNo": "7058555116",
+      "Hmenu": "chiken",
+      "room": "303",
+      "rp": "1000",
+      "Hw": "10",
+      "HotelRating": "Luxurious",
+      "img": "C:\\fakepath\\HM.12.jpg",
       "userName": "shraddha",
       "id": 4
     }
@@ -98,6 +124,50 @@
       "pancard": "LKJHU8765G",
       "city": "Bhopal",
       "id": 1
+    },
+    {
+      "userName": "sara khan",
+      "email": "sara@gmail.com",
+      "mobNo": "1254563652",
+      "dob": "14/12/2023",
+      "payment": "net-banking",
+      "gender": "Female",
+      "pancard": "SDFHJ345G",
+      "city": "Nashik",
+      "id": 2
+    },
+    {
+      "userName": "sara khan",
+      "email": "sara@gmail.com",
+      "mobNo": "1254563652",
+      "dob": "14/12/2023",
+      "payment": "net-banking",
+      "gender": "Female",
+      "pancard": "SDFHJ345G",
+      "city": "Nashik",
+      "id": 3
+    },
+    {
+      "userName": "sara khan",
+      "email": "sara@gmail.com",
+      "mobNo": "1254563652",
+      "dob": "14/12/2023",
+      "payment": "net-banking",
+      "gender": "Female",
+      "pancard": "SDFHJ345G",
+      "city": "Nashik",
+      "id": 4
+    },
+    {
+      "userName": "raj mehta",
+      "email": "raj@gmail.com",
+      "mobNo": "8885866955",
+      "dob": "05/12/2023",
+      "payment": "qr",
+      "gender": "Male",
+      "pancard": "ASDFG4534F",
+      "city": "nagpur",
+      "id": 5
     }
   ]
 }

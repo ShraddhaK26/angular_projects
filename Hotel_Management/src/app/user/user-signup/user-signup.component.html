@@ -38,13 +38,13 @@
 
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" formControlName="password" name="password" placeholder="Password" required="required">
+                <input type="password" class="form-control" formControlName="password" [type]="pass? 'text': 'password'" name="password" placeholder="Password" required="required">
                 <span class="passicon" *ngIf="pass" (click)="hidepass()"> <i class="bi bi-eye-fill"></i></span>
                 <span class="passicon" *ngIf="!pass" (click)="hidepass()"><i class="bi bi-eye-slash-fill"></i></span>
          <br> 
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" formControlName="Conpassword" name="confirm_password" placeholder="Confirm Password" required="required">
+                <input type="password" class="form-control" [type]="conpass? 'text':'password'" formControlName="Conpassword" name="confirm_password" placeholder="Confirm Password" required="required">
                 <span class="passicon" *ngIf="conpass" (click)="hideconpass()"> <i class="bi bi-eye-fill"></i></span>
                    <span class="passicon" *ngIf="!conpass" (click)="hideconpass()"><i class="bi bi-eye-slash-fill"></i></span>
                 

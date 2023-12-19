@@ -9,6 +9,7 @@ import { HotelRegistrationComponent } from './hotel-registration/hotel-registrat
 import { ReactiveFormsModule } from '@angular/forms';
 import { SearchPipe } from './pipe/search.pipe';
 import { HotelListComponent } from './hotel-list/hotel-list.component';
+import { ImagePathPipe } from './pipe/image-path.pipe';
 
 
 
@@ -21,6 +22,7 @@ import { HotelListComponent } from './hotel-list/hotel-list.component';
     HotelRegistrationComponent,
     SearchPipe,
     HotelListComponent,
+    ImagePathPipe,
  
     
    
