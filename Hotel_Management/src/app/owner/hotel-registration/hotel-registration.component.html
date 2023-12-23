@@ -3,6 +3,7 @@
     <div class="container">
             <h1 class="title1"> Hotel Registration</h1>
             <form [formGroup]="newHotelRegister">
+                
             <div >
                 
                 <input class="inBox" type="text" placeholder="Owner Name" formControlName="Oname" required>              
@@ -45,7 +46,7 @@
                 
             </div>
             <div >
-                <input class="inBox" type="text" placeholder="Hotel Email" formControlName="Hmail" required>        
+                <input class="inBox" type="text" placeholder="Hotel Email" formControlName="Hmail" required>           
                 <span class="err" *ngIf="newHotelRegister.get('Hmail')?.errors?.['maxlength']">Enter maximum 15 character allowed</span>
                 <span class="err" *ngIf="!newHotelRegister.get('Hmail')?.errors?.['maxlength'] && newHotelRegister.get('Hmail')?.errors?.['pattern']">Only Character Allowed</span> 
 

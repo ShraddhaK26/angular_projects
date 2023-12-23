@@ -7,6 +7,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminSignUpComponent } from './admin-sign-up/admin-sign-up.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { OwnersUpdateComponent } from './owners-update/owners-update.component';
+import { HotelsUpdateComponent } from './hotels-update/hotels-update.component';
+import { UsersUpdateComponent } from './users-update/users-update.component';
+import {  SearchPipe2 } from './pipe/search.pipe';
+import { ImgPipe } from './pipe/img.pipe';
 
 
 
@@ -15,12 +19,16 @@ import { OwnersUpdateComponent } from './owners-update/owners-update.component';
     AdminLandingComponent,
     AdminSignUpComponent,
     AdminHomeComponent,
+    HotelsUpdateComponent,
+    UsersUpdateComponent,
+    SearchPipe2,
+    ImgPipe,
     OwnersUpdateComponent
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    FormsModule,
+   FormsModule,
     ReactiveFormsModule
   ]
 })

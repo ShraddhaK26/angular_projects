@@ -17,10 +17,11 @@
     {
       "fname": "shraddha",
       "pan": "LTSPK6567D",
-      "email": "shraddhakupekar@gmail.com",
+      "email": "shraddha@gmail.com",
       "password": "12345",
       "conpassword": "12345",
       "gender": "Female",
+      "img": "C:\\fakepath\\women.jpg",
       "id": 1
     },
     {
@@ -30,6 +31,7 @@
       "password": "09876",
       "conpassword": "09876",
       "gender": "Male",
+      "img": "C:\\fakepath\\men.jpg",
       "id": 2
     }
   ],
@@ -40,7 +42,17 @@
       "email": "riya@gmail.com",
       "password": "riya",
       "Conpassword": "riya",
+      "img": "C:\\fakepath\\women1.jpg",
       "id": 1
+    },
+    {
+      "fname": "Neha",
+      "lname": "Patil",
+      "email": "neha123@gmail.com",
+      "password": "neha@123",
+      "Conpassword": "neha@123",
+      "img": "C:\\fakepath\\women2.jpg",
+      "id": 2
     }
   ],
   "HotelDetails": [
@@ -55,9 +67,9 @@
       "Hmenu": "Non-veg",
       "room": "300",
       "rp": "2000",
-      "Hw": "20",
+      "Hw": "25",
       "HotelRating": "larger",
-      "img": "C:\\fakepath\\HM.9.jpg",
+      "img": "C:\\fakepath\\HM.22.jpg",
       "userName": "om",
       "id": 1
     },

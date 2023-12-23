@@ -11,6 +11,53 @@
 </head>
 <body>
     <div class="login">
-
+        
+        
+            <!-- <button class="backbtn" (click)="back()"></button> -->
+            
+            
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+             <div class="main">
+                 <h3 class="h3">OWNER LIST</h3>
+                 
+                
+             <div class="fix">
+                 <input type="search"  placeholder="search" [(ngModel)]="searchText"> 
+             </div>
+             
+             <div  class="overflowTest">
+             <div *ngFor="let data of ownerDetails | search : searchText" >
+             <div class="container">
+                 <img src="../../../assets/images/{{data.img | img }}" alt="" width="90px" height="100px">
+               <span class="hoteldetail">
+            
+               <br>
+             
+               <table>
+             <tr>
+                <th> Name:{{data.fname}}</th>
+             </tr>
+             <tr>
+                <th>Pancard No.:{{data.pan}}</th>
+             </tr>
+             <tr>
+                <th>Email:{{data.email}}</th>
+             </tr>
+             <tr>
+                <th>Password:{{data.password}}</th>
+             </tr>
+             <tr>
+                <th>Gender:{{data.gender}}</th>
+             </tr>
+               </table>
+             
+             
+             </span>
+             
+             </div>
+             </div>
+             </div>
+             
+             </div>
         
         </div>

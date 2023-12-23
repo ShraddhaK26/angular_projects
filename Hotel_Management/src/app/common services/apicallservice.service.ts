@@ -12,6 +12,7 @@ export class ApicallserviceService {
   url="http://localhost:3000"
   userName: any;
   new: boolean =false;
+  recordByBookNowId: any;
   
   constructor(private httpClient: HttpClient) { }
   postApiCall(endPoint: any, formData: any) {

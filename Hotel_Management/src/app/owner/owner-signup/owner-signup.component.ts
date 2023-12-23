@@ -31,6 +31,7 @@ export class OwnerSignupComponent {
 
       conpassword: ['', [Validators.maxLength(15), Validators.pattern('[a-zA-Z0-9@ #]*')]],
       gender: [],
+      img:[''],
 
 
 

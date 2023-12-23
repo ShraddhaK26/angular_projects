@@ -1,26 +1,4 @@
- <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-<div class="main">
-
-<div class="fix">
-    <input type="search"  placeholder="search Hotel name"  [(ngModel)]="searchText"> 
-   <button class="backbtn" (click)="back()">Back</button>
-</div>
-<div class="demo">
-<div class="container" *ngFor="let data of hotelList | search : searchText">
-<h2 class="h2">Hotel : {{data.Hname}}</h2>
-<h3 class="h3">Location : {{data.Hadd}}</h3>
-<h3 class="hh3">Hotel Number : {{data.HNo}}</h3>
-<h3 class="hhh3">Rent :{{data.rp}}</h3>
-<div >
-        <input class="img" type="image" height="130px" width="350px" src="../../../assets/images/{{data.img | imagePath}}" >
-    </div>
-    <button (click)="edit(data.id)" style="font-size:15px" style="background-color: green;" >Edit <i class="fa fa-edit"></i></button>
-   <button (click)="delete(data.id)" style="font-size:15px" style="background-color: red;">Delete <i class="fa fa-trash-o"></i></button>
-</div>
-</div>
-
-</div>
- -->
+ 
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
  <div class="main">
      
@@ -55,7 +33,7 @@
        <th>Rent : <i class="price">{{data.rp}}</i></th>
        <td></td>
         <th><button class="bookingbtn" (click)="edit(data.id)">Edit<i class="fa fa-edit"></i></button></th> 
-        <th><button class="bookingbtn" (click)="delete(data.id)">Delete<i class="fa fa-delete"></i></button></th> 
+        <th><button class="bookingbtn1" (click)="delete(data.id)">Delete<i class="fa fa-delete"></i></button></th> 
      </tr> 
      <tr>
        <th>Hotel Workers :</th>

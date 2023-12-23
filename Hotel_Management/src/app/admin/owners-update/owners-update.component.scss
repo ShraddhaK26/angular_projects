@@ -4,12 +4,14 @@
     padding: 0px;
     }
     .login {
-    background-image: linear-gradient(to bottom, #dd3cad 0%, #fff 100%);
+    background-image:url(../../../assets/images/HM.19.jpg);
     height: 100vh;
     width: 100%;
     justify-content: center;
     align-items: center;
-    display: flex;
+    display: inline-block;
+    background-size: cover;
+    ;
     }
     .account-login {
     width: 500px;
@@ -47,19 +49,19 @@
     padding: 40px;
     border-radius: 5px;
     }
-    button.btn {
-    width: 100%;
-    background: #b9089c;
-    font-size: 20px;
-    padding: 11px;
-    color: #fff;
-    border: 0px;
-    margin: 10px 0px 20px;
-    }
-    .btn:hover{
-        color: #fff;
-        opacity: 0.8;
-    }
+    // button.btn {
+    // width: 100%;
+    // background: #b9089c;
+    // font-size: 20px;
+    // padding: 11px;
+    // color: #fff;
+    // border: 0px;
+    // margin: 10px 0px 20px;
+    // }
+    // .btn:hover{
+    //     color: #fff;
+    //     opacity: 0.8;
+    // }
     p {
     float: left;
     width: 100%;
@@ -151,4 +153,114 @@
         text-align: center;
         padding:5px
       
+      }
+
+.h3{
+    text-align: center;
+}
+
+      .container{
+        height: 250px;
+        background-color: #fff;
+        box-shadow: 0 0 15px rgb(36, 35, 35);
+        border-radius: 25px;
+        margin: 50px;
+        width:250px;
+       
+       
+      }
+      .container:hover{
+      background-color: rgb(36, 94, 94);
+      }
+      img{
+        float: left;
+        padding: 7px;
+      }
+      .hoteldetail{
+      margin-left: 20px;
+      text-align: center;
+      position: sticky;
+      
+      }
+      .main{
+       
+        display: inline-block;
+        // position: absolute;
+        // padding-bottom: 15px;
+       
+      }
+      label{
+       padding-left: 100px;
+      
+      }
+      
+      
+      .fix{
+        position: sticky;
+        height: 15px;
+        top: 0px;
+        /* z=positive element will come in front */
+        z-index: 1;
+        width: 1406px;
+       
+      }
+      .overflowTest {
+        // background: #4CAF50;
+        // color: white;
+        padding: 15px;
+        width: 90%;
+        height: 480px;
+        overflow: scroll;
+        display: inline-block;
+        border: 1px solid #ccc;
+      }
+      input[type="search"]{
+        color: rgb(24, 23, 23);
+        background-color: #ffffff;
+        padding: 10px;
+        width: 60%;
+        border-radius: 20px;
+        margin-left: 40px;
+        display: inline-block;
+      }
+      .backbtn{
+        padding: 20px;
+        color: white;
+        background-color: black;
+        font-size: 18px;
+        margin-top: -10px;
+       margin-left: 60px;
+       border-radius: 10px;
+      }
+      .backbtn:hover{
+        background-color: white;
+        color: black;
+      }
+      
+      
+      
+      th{
+      padding: 5px;
+      padding-left:26px;
+      text-align: start;
+      }
+      td{
+        text-align: start;
+      }
+      .price{
+        font-size: 22px;
+        color: rgb(78, 85, 85);
+      }
+      
+      .bookingbtn{
+        padding: 5px;
+        border-radius: 5px;
+        background-color: green;
+        color: white;
+      }
+      .bookingbtn:hover{
+        background-color: rgb(42, 56, 29);
+        box-shadow: 4px 4px 4px rgb(78, 207, 227);
+        margin-left: 5px;
+        padding: 6px;
       }

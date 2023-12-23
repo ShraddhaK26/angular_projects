@@ -16,6 +16,7 @@ export class UserSucessComponent {
   constructor(private router:Router,private apicallservice:ApicallserviceService){}
 
   ngOnInit(){
+    this.showBookingDetails();
     this.id=this.apicallservice.id;
   }
 
@@ -32,7 +33,15 @@ export class UserSucessComponent {
 
 
 
-  hotelbooking(){
+  hotelbooking(id:any){
+    let bookingData:any=[];
+    this.BookingDetails.forEach((ele:any) => {
+      if(id==ele.id){
+        bookingData.push(ele)
+      }
+      
+    });
+this.apicallservice.recordByBookNowId=bookingData;
     this.router.navigateByUrl("/user/hotelBooking")
   }
 
