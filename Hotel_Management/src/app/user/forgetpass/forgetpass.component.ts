@@ -14,103 +14,72 @@ export class ForgetpassComponent {
 
   pass = false;
   conpass = false;
+  endPoint: string = "user";
+  userData: any;
+  userRecordByEmail:any=[];
+  changePassForm!:FormGroup;
+  userId: any;
  
  
 
   constructor(private fb: FormBuilder, private router: Router, private apiCallService: ApicallserviceService) { }
-  showpass:boolean=true;
-  showpass1:boolean=true;
-  showpass2:boolean=true;
-  showForgotDiv:boolean=false;
-  matcherr:boolean=false;
-  endPoint='user';
-  signupData:any;
-  adminName:any;
-  password:any;
-  loginFail:boolean=false
-  ownerRecordByEmail:any=[];
-  changePassForm!:FormGroup;
-  ownerId:any;
-  changeConPass:any
+  ngOnInit() {
+    this.signupData();
+    this.UserSignUpData();
+  }
+  signupData() {
+    this.forgetForm = this.fb.group({
+
+      email: ['', [Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
+      password: ['', [Validators.maxLength(15)]],
+
+    
+    })
+  }
+
+  UserSignUpData(){
+    let endPoint ="user";
+   this.apiCallService.getApiCall(endPoint).subscribe(res=>{
+    this.userData = res;
+    console.log("userdata",this.userData);
+    
+   })}
 
 
-
-
-ngOnInit(){
-  this.getDataFromSignup();
-  this.forgotData();
-}
-
- async getDataFromSignup(){
-  this.signupData= await this.apiCallService.getApiCall(this.endPoint).toPromise()
-
-}
-forgotData(){
-  this.changePassForm=this.fb.group({
-
-   
-    // pan:[this.ChangePan],
-    email:['',[Validators.pattern('[a-zA-z0-9]*+@+[a-z]{2,6}+/.+[a-z]{2,4}')]],
-    password:[''],
-    // conpassword:[...this.pass],
-    // gender:[this.ChangeGender]
+  resetPass(){
+    console.log(this.changePassForm.value);
   
-
-  })
-
-}
-
-
-
-
-checkEmail(){
-  
-  this.signupData.forEach((ele:any) => {
-   if(this.changePassForm.value.email==ele.email){
-    this.ownerRecordByEmail.push(ele)
-   }
-console.log(this.ownerRecordByEmail);
-
-  })
-
-
- 
-
- 
-  
-}
-changePassword(){
-
-  console.log(this.changePassForm.value);
-  
-  this.ownerRecordByEmail.forEach((ele:any) => {
- this.ownerId=ele.id
+  this.userRecordByEmail.forEach((ele:any) => {
+ this.userId=ele.id
  
  
  
   });
 
  
-this.apiCallService.patchApiCall(this.endPoint,this.ownerId,this.changePassForm.value).subscribe(res=>{
+this.apiCallService.patchApiCall(this.endPoint,this.userId,this.changePassForm.value).subscribe(res=>{
    
    alert('update')
      })
 }
 
-
-  backBtn(){
-    this.router.navigateByUrl('')
-  }
-  divForgot(){
-    this.showForgotDiv=!this.showForgotDiv
-  }
-  forsubmit(data:any){
-    console.log(data);
+  checkEmail(){
+    this.userData.forEach((ele:any) => {
+      if(this.changePassForm.value.email==ele.email){
+       this.userRecordByEmail.push(ele)
+      }
+   console.log(this.userRecordByEmail);
+   
+     })
+    
+   
+   
+    
+   
     
   }
-  goLoginPage(){
-    this.showForgotDiv=!this.showForgotDiv
-  }
+
+
   hidepass() {
     this.pass = !this.pass;
   }
@@ -118,13 +87,5 @@ this.apiCallService.patchApiCall(this.endPoint,this.ownerId,this.changePassForm.
     this.conpass = !this.conpass
   }
  
+  
 }
- 
-
-  
-
-
-
- 
-  
-
