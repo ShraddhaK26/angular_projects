@@ -47,8 +47,8 @@
             </div>
             <div >
                 <input class="inBox" type="text" placeholder="Hotel Email" formControlName="Hmail" required>           
-                <span class="err" *ngIf="newHotelRegister.get('Hmail')?.errors?.['maxlength']">Enter maximum 15 character allowed</span>
-                <span class="err" *ngIf="!newHotelRegister.get('Hmail')?.errors?.['maxlength'] && newHotelRegister.get('Hmail')?.errors?.['pattern']">Only Character Allowed</span> 
+                <!-- <span class="err" *ngIf="newHotelRegister.get('Hmail')?.errors?.['maxlength']">Enter maximum 15 character allowed</span>
+                <span class="err" *ngIf="!newHotelRegister.get('Hmail')?.errors?.['maxlength'] && newHotelRegister.get('Hmail')?.errors?.['pattern']">Only Character Allowed</span>  -->
 
                 <input class="inBox" type="text" placeholder="Hotel Workers" formControlName="Hw" required>             
                 <span class="err" *ngIf="newHotelRegister.get('Hw')?.errors?.['maxlength']">Enter maximum 15 character allowed</span>

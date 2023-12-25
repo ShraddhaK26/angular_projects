@@ -18,25 +18,99 @@ export class ForgetpassComponent {
  
 
   constructor(private fb: FormBuilder, private router: Router, private apiCallService: ApicallserviceService) { }
-  ngOnInit() {
-    this.signupData();
+  showpass:boolean=true;
+  showpass1:boolean=true;
+  showpass2:boolean=true;
+  showForgotDiv:boolean=false;
+  matcherr:boolean=false;
+  endPoint='user';
+  signupData:any;
+  adminName:any;
+  password:any;
+  loginFail:boolean=false
+  ownerRecordByEmail:any=[];
+  changePassForm!:FormGroup;
+  ownerId:any;
+  changeConPass:any
+
+
+
+
+ngOnInit(){
+  this.getDataFromSignup();
+  this.forgotData();
+}
+
+ async getDataFromSignup(){
+  this.signupData= await this.apiCallService.getApiCall(this.endPoint).toPromise()
+
+}
+forgotData(){
+  this.changePassForm=this.fb.group({
+
+   
+    // pan:[this.ChangePan],
+    email:['',[Validators.pattern('[a-zA-z0-9]*+@+[a-z]{2,6}+/.+[a-z]{2,4}')]],
+    password:[''],
+    // conpassword:[...this.pass],
+    // gender:[this.ChangeGender]
+  
+
+  })
+
+}
+
+
+
+
+checkEmail(){
+  
+  this.signupData.forEach((ele:any) => {
+   if(this.changePassForm.value.email==ele.email){
+    this.ownerRecordByEmail.push(ele)
+   }
+console.log(this.ownerRecordByEmail);
+
+  })
+
+
+ 
+
+ 
+  
+}
+changePassword(){
+
+  console.log(this.changePassForm.value);
+  
+  this.ownerRecordByEmail.forEach((ele:any) => {
+ this.ownerId=ele.id
+ 
+ 
+ 
+  });
+
+ 
+this.apiCallService.patchApiCall(this.endPoint,this.ownerId,this.changePassForm.value).subscribe(res=>{
+   
+   alert('update')
+     })
+}
+
+
+  backBtn(){
+    this.router.navigateByUrl('')
   }
-  signupData() {
-    this.forgetForm = this.fb.group({
-
-      email: ['', [Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
-      password: ['', [Validators.maxLength(15)]],
-
-      conpassword: ['', [Validators.maxLength(15)]],
-    })
+  divForgot(){
+    this.showForgotDiv=!this.showForgotDiv
   }
-
-  resetPass(){
+  forsubmit(data:any){
+    console.log(data);
     
   }
-
-
-
+  goLoginPage(){
+    this.showForgotDiv=!this.showForgotDiv
+  }
   hidepass() {
     this.pass = !this.pass;
   }
@@ -44,5 +118,13 @@ export class ForgetpassComponent {
     this.conpass = !this.conpass
   }
  
-  
 }
+ 
+
+  
+
+
+
+ 
+  
+
